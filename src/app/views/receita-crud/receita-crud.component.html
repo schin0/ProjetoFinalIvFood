@@ -1,0 +1,32 @@
+<h1>Receitas cadastradas:</h1>
+<br><br>
+<!-- Criamos um ngFor para criamos uma receita para cada "objeto" do array de receitas,
+ou seja, toda vez que criamos uma nova receita ele vai gerar uma nova div -->
+<div *ngFor="let receita of receitas">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        <!-- Interpolação para mostrar os dados recebidos -->
+        {{ receita.infos.nameReceita }}
+      </mat-card-title>
+      <mat-card-subtitle>{{ receita.infos.autor }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ receita.infos.descricao }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="direita">
+      <button mat-button (click)="openDialog(receita)">
+        <mat-icon>
+          edit
+        </mat-icon>
+      </button>
+      <button mat-button (click)="excluirReceita(receita.id)">
+        <mat-icon>
+          delete
+        </mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

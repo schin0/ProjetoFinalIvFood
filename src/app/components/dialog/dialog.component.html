@@ -1,0 +1,43 @@
+<div>
+  <mat-dialog-content>
+    <h1>Adicionar receitas:</h1>
+    <form class="example-form" [formGroup]="formCriar">
+      <!-- Colocamos o formGroup criado no nosso componente -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome da receita</mat-label>
+        <input matInput placeholder="Ex. Lasanha" formControlName="nameReceita" name="nameReceita">
+        <!-- Inserimos o nome da propriedade do formControlName para chamarmos no componente,  sendo o mesmo nome
+        que o *name* do input -->
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput formControlName="descricao" name="descricao"></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Ingredientes</mat-label>
+        <input matInput formControlName="ingredientes" name="ingredientes">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Modo de preparo</mat-label>
+        <input matInput formControlName="preparo" name="preparo">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Autor da receita</mat-label>
+        <input matInput formControlName="autor" name="autor">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>
+      <mat-icon class="remove">
+        delete
+      </mat-icon>
+    </button>
+    <button mat-button mat-dialog-close (click)="criarReceita()">
+      <!-- Criamos a função no componente e ela será chamada assim que clicarmos no botão -->
+      <mat-icon class="save">
+        save
+      </mat-icon>
+    </button>
+  </div>
+</div>

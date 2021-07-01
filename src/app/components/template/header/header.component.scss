@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  top: 0;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .title-group {
+    padding-left: 20px;
+    i {
+      padding: 0px 5px;
+  }}
+}

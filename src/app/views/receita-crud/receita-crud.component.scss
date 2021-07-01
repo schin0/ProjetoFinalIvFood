@@ -1,0 +1,19 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-shadow: 1px 1px 5px white;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  margin: 1vw;
+  .example-card {
+    width: 50%;
+    .direita {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
